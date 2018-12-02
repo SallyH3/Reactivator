@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="styles.css"><link rel="stylesheet" type="text/css" href="normalize.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<!-- media query link here -->
+
+<title>Static-Comp-Challenge-2</title>
+</head>
+  <body>
+    <section class="wrapper">
+      <!-- sidebar here -->
+      <aside class="sidebar-container">
+        <a class="s-sidebar__trigger" href="">
+         <i class="fa fa-bars"></i>
+        </a>
+      <nav class="s-sidebar__nav">
+        <section class = "oprah-container">
+        <img class="oprah-image" src="./images/oprah.jpg">
+        <article class="oprah-sidebar-title">Oprah Winfrey
+        <i class="fas fa-sort-down"></i>
+        <hr>
+        </article>
+        </section>
+        <p class="main-sidebar">Main
+        </p>
+        <ul>
+          <li>
+            <a class="s-sidebar__nav-link" href="">
+              <i class="fa fa-home"></i>
+              <em>HOME</em>
+            </a>
+          </li>
+          <li>
+           <a class="s-sidebar__nav-link" href="">
+             <i class="fas fa-user-md"></i>
+             <em>JOBS</em>
+           </a>
+         </li>
+         <li>
+           <a class="s-sidebar__nav-link" href="">
+            <i class="far fa-file"></i>
+            <em>RESUMES</em>
+          </a>
+        </li>
+        <li>
+          <a class="s-sidebar__nav-link" href="">
+            <i class="fas fa-thumbtack"></i>
+            <em>TASKS</em>
+          </a>
+        </li>
+        <li>
+          <a class="s-sidebar__nav-link" href="">
+          <i class="fas fa-calendar-alt"></i>
+            <em>CALENDAR</em>
+          </a>
+        </li>
+    <hr>
+    <p class="admin-sidebar">
+    Admin</p>
+    <li>
+     <a class="s-sidebar__nav-link" href="">
+      <i class="fas fa-users"></i>
+      <em>USERS</em>
+    </a>
+  </li>
+  <li>
+   <a class="s-sidebar__nav-link" href="">
+    <i class="fas fa-plane"></i>
+    <em>LOCATIONS</em>
+  </a>
+  </li>
+  <li>
+   <a class="s-sidebar__nav-link" href="">
+    <i class="fas fa-briefcase"></i>
+    <em>WORKFLOWS</em>
+  </a>
+  </li>
+  <li>
+   <a class="s-sidebar__nav-link" href="">
+    <i class="fas fa-network-wired"></i>
+    <em>JOB BOARDS</em>
+  </a>
+  </li>
+  <li>
+   <a class="s-sidebar__nav-link" href="">
+    <i class="fas fa-share-alt"></i>
+    <em>SOCIAL</em>
+  </a>
+  </li>
+  <hr>
+  <p class="categories-sidebar">
+  Categories</p> 
+  </ul>
+
+  <!-- checkboxes -->
+      <div class="checkbox-container">
+        <input class="checkbox" type="checkbox" id="administrative" name="feature"
+          value="administrative" checked />
+        <label for="administrative">Administrative</label>
+        <input class="checkbox" type="checkbox" id="design" name="feature"
+          value="design" />
+        <label for="design">Design</label>
+        <input class="checkbox" type="checkbox" id="executive" name="feature"
+          value="executive" />
+        <label for="executive">Executive</label>
+        <input class="checkbox" type="checkbox" id="human-resources" name="feature"
+          value="human-resources" />
+        <label for="human-resources">Human Resources</label>
+      </div>
+      </nav>  
+      </aside>
+
+  <div class="main-wrapper">
+    <!-- search bar at top -->
+    <header class="header1">
+      <i class="fas fa-bars"></i>
+      <input class = "search-bar" type="text" placeholder="Search for a job, task or resume" />
+      <i class="fas fa-user"></i>
+      <i class="fas fa-bookmark"></i>
+      <i class="far fa-question-circle"></i>
+    </header>
+
+    <header class="header2">
+      <article class="customer-service-rep-title">Customer Service Representative</article>
+      <i class="fas fa-map-marker-alt"></i>
+      <p class= "location-header-text">Austin, TX</p>
+      <p class="preview-text">Preview this post</p>
+      <article class="buttons-below-search-bar">
+        <button class="open-button" type="button">OPEN</button>
+        <i class="fas fa-pen"></i>
+        <i class="fas fa-mouse-pointer"></i>
+        <i class="fas fa-glasses"></i>
+      </article>
+      <article class="text-bar-above-graphs">
+        <a href="">SUMMARY</a>
+        <a href="">APPLICANTS</a>
+        <a href="">JOB BOARD</a>
+        <a href="">INTERVIEWS</a>
+        <a href="">ACTIVITY</a>
+        <a href="">BROADCAST</a>
+        <a href="">NOTIFICATIONS</a>
+      </article>
+    </header>
+
+  <main class="main-container">
+    <section class="graphs">
+      <section class="graphs-left">
+        <section class="circle-graph">
+        <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle-chart__background" stroke="#D9E4EB" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+        <circle class="circle-chart__circle" stroke="#5CC0C7" stroke-width="2" stroke-dasharray="79,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+        <g class="circle-chart__info">
+        <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="6">3,154</text>
+        <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="3">APPLICANTS</text>
+        </g>
+        </svg>
+        </section>
+        <section class="circle-graph">
+          <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+            <circle class="circle-chart__background" stroke="#D9E4EB" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+            <circle class="circle-chart__circle" stroke="#A865AB" stroke-width="2" stroke-dasharray="25,200" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+            <g class="circle-chart__info">
+            <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="6">912</text>
+            <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="3">FORWARDS</text>
+            </g>
+          </svg>
+        </section>
+        <section class="circle-graph">
+        <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle-chart__background" stroke="#D9E4EB" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+        <circle class="circle-chart__circle" stroke="#13A4FA" stroke-width="2" stroke-dasharray="50,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+        <g class="circle-chart__info">
+        <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="6">1,546</text>
+        <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="3">INTERVIEWS</text>
+        </g>
+        </svg>
+        </section>
+         <article class="total">
+        <button class="totals-button" type="button">TOTALS - out of 5,231 views</button>  
+        </article> 
+      </section> 
+      <!-- closing tag above is for graphs-left area -->
+      <section class="square-graph">
+        <img src="./images/square-graph.png">
+      </section>
+    </section>
+
+    <div class="line-with-caret">
+      <span class="outer-line"></span>
+      <span class="fas fa-caret-up" aria-hidden="true"></span>
+      <span class="outer-line"></span>
+    </div>
+
+    <div class="job-table-wrapper">
+      <section class="job-grid-box">
+              <!-- use grid here instead of table per another student -->
+          <article class="job-container">
+      <article class="job-bar">
+        <p>JOB DESCRIPTION</p>
+        <button class="edit-button" type="button">EDIT<i class="fas fa-pen"></i></button>
+      </article>
+    </article>
+        <div class="box position">
+          <p class="text position">POSITION TITLE</p> 
+          <p class="right grid-customer">Customer Service Representative</p>
+        </div>
+          <hr>
+        <div class="box location">
+          <p class="text location">LOCATION</p> 
+          <p class="right grid-location">Austin, TX</p>
+        </div>
+          <hr>
+        <div class="box employment">
+          <p class="text employment">EMPLOYMENT TYPE</p> <p class="right grid-employment">Full-time</p>
+        </div>
+          <hr>
+        <div class="box experience">
+          <p class="text experience">EXPERIENCE</p> 
+          <p class="right grid-experience">Mid-level</p>
+        </div>
+          <hr>
+        <div class="box status">
+          <p class="text status">STATUS</p> 
+          <p class="right grid-status">Open</p>
+        </div>
+          <hr>
+        <div class="box description"><p class="text description">DESCRIPTION</p> 
+          <p class="right grid-description">Those options are already baked in with this model shoot me an email clear blue water but we need distributors to evangelize the new line to local markets, but fire up your browser. Strategic high-level 30,000 ft view. Drill down re-inventing the wheel at the end of the day but curate imagineer, or to be inspired is to become creative.</p>
+        </div>
+          <hr>
+        <div class="box hiring-lead"><p class="text hiring-lead">HIRING LEAD</p>
+          <img class = "lead" src="./images/amypoehler.jpg">
+          <p class="right grid-lead">Amy Poehler</p>
+        </div>
+          <hr>
+        <div class="box salary">
+          <p class="text salary">APPROVED SALARY</p> 
+          <p class="right grid-salary">$100,000</p>
+        </div>
+      </section>
+    <!-- social media bottom right column -->
+
+      <section class="bottom-right-container">
+        <article class="bottom-right-main">
+          <article class="social-media-buttons">
+            <button class="facebook-button" type="button"><i class="fab fa-facebook-f"></i>Post to Facebook</button>
+            <button class="twitter-button" type="button"><i class="fab fa-twitter"></i>Tweet this job</button>
+            <button class="linkedin-button" type="button"><i class="fab fa-linkedin"></i>Post to Linkedin</button>
+          </article>
+
+          <article class="social-media-inputs">
+            <i class="fas fa-link"></i>
+            <p class="link-to-job-text">Link to this job</p>
+            <p class="input link-text">Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr zimbra, mobly napster hipmunk prezi chartly bitly spock.</p>
+            <input class = "link-to-job" name="q" type="search" placeholder="http://loremipsum.dol/sit amet..." /><button class="button link" type="button">Copy</button>
+            <hr>
+            <i class="fas fa-external-link-alt"></i>
+            <p class="button-widget-text">Use the button widget</p>
+            <p class="input widget">Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr zimbra, mobly napster hipmunk prezi chartly bitly spock.</p>
+            <input class = "use-button-widget" name="q" type="search" placeholder="<script type="text/javascript" s... /><button class="button widget" type="button">Copy</button>
+            <hr>
+            <i class="fas fa-location-arrow"></i>
+            <p class="resumes-by-email-text">Upload Resumes by Email</p>
+            <p class="input email">You can automatically upload multiple resumes to this job by emailing the address below.</p>
+            <input class = "upload-resumes-by-email" name="q" type="search" placeholder="amypoehler@gmail.com" />
+          </article>
+        </article>
+      </section>
+    </div>
+  </main>
+    </section>
+  </body>
+</html>

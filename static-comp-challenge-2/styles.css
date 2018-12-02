@@ -1,0 +1,673 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+ }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search-bar {
+  border: 1px solid #F1F1F1;
+  height:75px;
+  padding-left:25px;   
+  width: 100%;   
+}
+
+.main-wrapper {
+  width: 100%;
+}
+
+.header1 {
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 8px;
+  width: 100%;
+}
+
+.header1 i {
+  color: gray;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.header1 i:hover {
+  background-color: #02ACEB;
+  color: #FFFFFF;
+  padding: 10px;
+  transition: .2s;
+}
+
+.wrapper {
+  display: flex;
+}
+
+/* --- Sidebar --- */
+
+.sidebar-container {
+  display: flex;
+  /*flex-direction: column;*/
+  max-width: 400px;
+  position: relative; 
+}
+
+.oprah-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oprah-image {
+  border-radius: 100px;
+  display: block;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  width: 80px;
+}
+
+.oprah-sidebar-title {
+  padding: 10px 10px;
+}
+
+.oprah-sidebar-title i {
+  display: inline;
+}
+
+hr {
+  width: 100%;
+  height: 0px;
+}
+
+.main-sidebar,
+.admin-sidebar {
+  color: #97A1AB;
+  margin-top: 20px;
+  padding-left: 15px;
+}
+
+em {
+   font-style: normal;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+} 
+
+.s-sidebar__trigger {
+  z-index: 2;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: #192b3c;
+}
+
+.s-sidebar__trigger > i {
+  display: inline-block;
+  margin: 1.5em 0 0 1.5em;
+  color: #D1D3D8;
+}
+
+.s-sidebar__nav {
+  background: #243e56;
+  color: rgba(255, 255, 255, 0.7);
+  left: -15em;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  transition: all .3s ease-in;
+  width: 15em;
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus + .s-sidebar__nav,
+.s-sidebar__trigger:hover + .s-sidebar__nav {
+  left: 0;
+}
+
+.s-sidebar__nav ul {
+  padding: 2px;   
+}
+
+.s-sidebar__nav ul li {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.s-sidebar__nav-link {
+  display: inline-block;
+  height: 3em;
+  position: relative;
+  width: 100%;
+}
+
+.s-sidebar__nav-link em {
+  position: absolute;
+  top: 50%;
+  left: 4em;
+  transform: translateY(-50%);
+}
+
+.s-sidebar__nav-link:hover {
+  background: #4d6276;
+  border-left: 3px solid #02ACEB;
+}
+
+.s-sidebar__nav-link > i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+}
+
+.s-sidebar__nav-link > i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  padding-top: 0px;
+}
+
+/* --- Checkboxes --- */
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+input[type="checkbox"] + label:before {
+  border: 1px solid #333;
+  content: "\00a0";
+  display: inline-block;
+  height: 16px;
+  margin: 0 .25em 0 0;
+  padding: 0;
+  vertical-align: top;
+  width: 16px;
+}
+input[type="checkbox"]:checked + label:before {
+  background: red;
+  color: #333;
+  content: "\2713";
+  text-align: center;
+}
+
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+}
+
+/* Media queries for sidebar */
+
+@media (min-width: 42em) {
+   .s-layout__content {
+      margin-left: 4em;
+   }
+   
+   /* Sidebar media */
+   .s-sidebar__trigger {
+      width: 4em;
+   }
+   
+   .s-sidebar__nav {
+      width: 4em;
+      left: 0;
+   }
+   
+   .s-sidebar__nav:hover,
+   .s-sidebar__nav:focus,
+   .s-sidebar__trigger:hover + .s-sidebar__nav,
+   .s-sidebar__trigger:focus + .s-sidebar__nav {
+      width: 15em;
+   }
+}
+
+@media (min-width: 68em) {
+   .s-layout__content {
+      margin-left: 15em;
+   }
+   
+   /* Sidebar media */
+   .s-sidebar__trigger {
+      display: none
+   }
+   
+   .s-sidebar__nav {
+      width: 15em;
+   }
+   
+   .s-sidebar__nav ul {
+      top: 1.3em;
+   }
+}
+
+.header2 {
+  color: gray;
+  display: flex;
+  display: inline;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header2 i {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.customer-service-rep-title {
+  /*flex-direction: column;*/
+  align-items: flex-start;
+  display: flex;
+  font-size: 25px;
+  justify-content: flex-start;
+  margin-left: 10px;
+  padding-top: 50px;
+}
+
+.location-header-text,
+.preview-text {
+  display: inline;
+  flex-direction: column;
+  font-weight: lighter;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.preview-text {
+  color: #02ACEB;
+}
+
+.buttons-below-search-bar {
+  align-items: space-between;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.buttons-below-search-bar i {
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid gray;
+  color: gray;
+  display: flex; 
+  height: 25px;
+  justify-content: center;
+  margin: 5px;
+  width: 25px;
+}
+
+.open-button {
+  border-radius: 100px;
+  color: gray;
+  font-weight: bold;
+  height: 25px;
+  margin: 5px;
+  width: 75px;
+}
+
+.open-button:hover {
+  background-color: lightgray;
+}
+
+.text-bar-above-graphs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+}
+
+.text-bar-above-graphs a:hover {
+  border-bottom: 3px solid #02ACEB;
+  color: black;
+  margin: 0px;
+  transition: .2s;
+}
+
+.text-bar-above-graphs a {
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px;
+  padding-bottom: 10px; 
+  padding-top: 20px;
+}
+
+.line-with-caret {
+  text-align: center;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.outer-line {
+  width: 45%;
+  border-bottom: 1px solid lightgrey;
+}
+
+span.fas {
+  background-color: #FFF;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  color: lightgrey;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.3em 0.5em;
+  vertical-align: middle;
+}
+
+/* Layout */
+
+.main-container {
+  background-color: #EDF2F6;
+  width: 100%;
+}
+
+/* graphs area */
+
+.graphs {
+  display: flex;
+  align-items: center;
+}
+
+.graphs-left {
+  display: flex;
+}
+
+.total {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.totals-button {
+  border-radius: 100px;
+  color: gray;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 7px 7px;
+}
+
+.square-graph img {
+  height: 200px;
+  margin: 20px;
+  width: 300px;
+}
+
+.circle-graph {
+  align-items: space-between;
+  display: flex;
+  
+  flex-wrap: wrap;
+  padding-left: 50px;
+  width: 50%;
+}
+
+.circle-chart__circle {
+  animation: circle-chart-fill 2s reverse;  
+  display: flex;
+  transform: rotate(5deg); 
+  transform-origin: center; 
+}
+
+.circle-chart__info {
+  animation: circle-chart-appear 2s forwards;
+  display: flex;
+  opacity: 0;
+  transform: translateY(0.3em);
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.job-table-wrapper {
+  background-color: #ECF2F6;
+  display: flex;
+}
+
+.job-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+}
+
+.job-bar {
+  background-color: #717D94;
+  color: #FFF;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 10px;
+  width: 100%;
+}
+
+.job-bar p {
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.job-grid-box {
+  background-color: #FFF;
+  display: grid;
+  /*grid-template-rows: 100px;*/
+  grid-gap: 0px;
+  margin: 35px;
+  width: 70%;
+}
+
+.box {
+  background-color: #FFF;
+  color: black;
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* grid: figure out how to get 
+space between text below */
+
+.box p.text {
+  align-items: flex-start;
+  display: flex;
+  font-weight: bold;
+  justify-content: flex-start;
+}
+
+.box p.right {
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+}
+
+.lead {
+  border-radius: 30px;
+  display: inline;
+  height: 50px;
+  padding: 10px 5px 5px 10px;
+  width: 50px;
+}
+
+.edit-button {
+  background-color: #7C8BA6;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 12px;
+  height: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 50px;
+}
+
+.desription-box-text-details {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.lead-text {
+  display: inline;
+}
+
+.poehler-text {
+  display: inline;
+}
+
+.bottom-right-container {
+  background-color: #ECF2F6; 
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+}
+
+/* --- Social media buttons --- */
+
+.social-media-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px 10px 0px;
+}
+
+.facebook-button {
+  background-color: #4B71C3;
+  border-radius: 3px;
+  border: none;
+  color: #FFF;
+  display: inline;
+  font-size: 12px;
+  height: 40px;
+  margin: 10px;
+  width: 225px;
+}
+
+.facebook-button i {
+  padding: 10px 75px 10px 0px;
+}
+
+.twitter-button {
+  background-color: #01A9EF;
+  border-radius: 3px;
+  border: none;
+  color: #FFF;
+  display: inline;
+  font-size: 12px;
+  height: 40px;
+  margin: 10px;
+  width: 225px;
+}
+
+.twitter-button i {
+  padding: 10px 90px 10px 0px;
+}
+
+.linkedin-button {
+  background-color: #037EBB;
+  border-radius: 3px;
+  border: none;
+  color: #FFF;
+  display: inline;
+  font-size: 12px;
+  height: 40px;
+  margin: 10px;
+  width: 225px;
+}
+
+.linkedin-button i {
+  padding: 10px 75px 10px 0px;
+}
+
+.link-to-job-text {
+  color: #5F6B7E;
+  display: inline;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.button-widget-text {
+  color: #5F6B7E;
+  display: inline;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.resumes-by-email-text {
+  color: #5F6B7E;
+  display: inline;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.social-media-inputs {
+  margin: 15px 0px 10px 0px;
+  width: 70%;
+}
+
+.social-media-inputs i {
+  display: inline;
+}
+
+.input {
+  color: #8F99A6;
+  font-size: 10px;
+}
+
+.link-to-job {
+  border: none;
+  border-radius: 3px 0px 0px 3px;
+  font-size: 10px;
+  height: 30px;
+  padding-left: 10px;
+  width: 200px;
+}
+
+.use-button-widget {
+  border: none;
+  border-radius: 3px 0px 0px 3px;
+  font-size: 10px;
+  height: 30px;
+  padding-left: 10px;
+  width: 200px;
+}
+
+.button {
+  background-color: #47BAC1; 
+  border: none;
+  border-radius: 0px 3px 3px 0px;
+  color: #FFF;
+  font-size: 10px;
+  height: 30px;
+}
+
+.upload-resumes-by-email {
+  border: none;
+  border-radius: 3px;
+  font-size: 10px;
+  height: 30px;
+  padding-left: 10px;
+  width: 200px;
+}

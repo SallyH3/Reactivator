@@ -1,0 +1,32 @@
+* {
+ box-sizing: border-box;
+}
+
+.article1 {
+  background: papayawhip;
+  border: 4px dashed black;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px gray;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  height: 100px;
+  margin: 20px;
+  margin-left: auto;
+  padding: 30px;
+  text-align: center;
+  width: 200px;
+}
+
+.article2 {
+  background: papayawhip;
+  border: 4px dashed black;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px gray;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  height: 100px;
+  margin: 20px;
+  padding: 30px;
+  text-align: center;
+  width: 200px;
+}

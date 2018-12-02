@@ -1,0 +1,9 @@
+article {
+  display: inline-block;
+width: 200px;
+height: 200px;
+padding: 20px;
+border: 20px solid blue;
+box-sizing: border-box;
+border-radius: 50px;
+} 
