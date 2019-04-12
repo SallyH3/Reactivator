@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import data from '../data.js';
 
-export default class Card extends Component {
+class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,3 +31,5 @@ export default class Card extends Component {
     )
   }
 }
+
+export default Card;
