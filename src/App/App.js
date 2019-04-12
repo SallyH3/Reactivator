@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card.js';
-import './Styles/index.scss';
+import '../Styles/index.scss';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <section>
-        Hello world!
+      <section className='main-container'>
+        <header className='title'>
+          Reactivator
+        </header>
+        <p className='subtitle'>
+          a react.js study tool
+        </p>
+      <Card />
       </section>
     );
   }
 }
-
-export default App;
