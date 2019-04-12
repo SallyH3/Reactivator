@@ -8,6 +8,9 @@ export default class Card extends Component {
 
     }
   }
+  
+  //create method getRandomQuestion to display random q's on card 
+
 
   render() {
     return (

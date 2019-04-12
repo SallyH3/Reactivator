@@ -16,7 +16,7 @@ export default class App extends Component {
       <Card 
       subject={
         data.map((trivia, index) => {
-          return trivia.subject;
+          return trivia.subject
         })
       }
       question={
