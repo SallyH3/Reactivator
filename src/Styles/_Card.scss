@@ -3,12 +3,13 @@
   flex-direction: column;
   transition:all 0.3s ease;
   border-radius: .2rem;
-  border: 1px solid hsl(196, 46%, 19%);
-  background: hsl(186, 74%, 93%);
+  border: 1px solid $card-border;
+  background: $card-bkrd;
   min-width: 25rem;
   padding: 1.7rem;
   position: relative;
-  color: hsl(0, 4%, 18%);
+  color: $card-color;
+  width: 5rem;
 }
 
 .subject {
@@ -22,6 +23,7 @@
   font-size: 1.1rem;
   margin-top: -.1rem;
   margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 
 .user-answer {

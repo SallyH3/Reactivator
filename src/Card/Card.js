@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
+import data from '../data.js';
 
 export default class Card extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
 
     }
   }
+  
+  //create method getRandomQuestion to display random q's on card 
+
 
   render() {
     return (
       <main className='card-container'>
         <h3 className='subject'>
-          Subject: 
+          Subject: {this.props.subject[5]}
         </h3>
         <h4 className='question'>
-          Question:
+          Question: {this.props.question[5]}
         </h4>
         <form className='form'>
           <input type='text'
