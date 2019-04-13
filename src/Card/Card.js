@@ -11,7 +11,7 @@ class Card extends Component {
   }
 
   checkAnswer = () => {
-    if(this.state.input === this.props.answer) {
+    if(this.state.input.toLowerCase() === this.props.answer.toLowerCase()) {
       this.setState({
         message: 'Correct - nice work!'
       })
@@ -36,16 +36,18 @@ class Card extends Component {
 
   handleInputChange = (e) => {
     e.preventDefault()
-    //fix below so that user can enter upper or lowercase and it still checks answer correctly
-    let userInput = this.state.input.toLowerCase();
+    let userInput = this.state.input;
     let result = this.checkAnswer(userInput);
     this.handleReturn(result)
   }
+
+  //need local storage in this component to keep track of cards they answered wrong, will then send these cards they answered wrong to controls where they click 'study list' and it displays cards that were answered wrong
 
 
   render() {
     return (
       <main className='card-container'>
+      <section className='cards'>
         <h3 className='subject'>
           Subject: {this.props.subject}
         </h3>
@@ -64,6 +66,7 @@ class Card extends Component {
           </input>
           <p className = 'message'>{this.state.message}</p>
         </form>
+        </section>
       </main>
     )
   }
