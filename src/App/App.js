@@ -5,6 +5,27 @@ import '../Styles/index.scss';
 import data from '../data.js';
 
 export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      currentCard: null,
+      cards: [],
+      currentCards: []
+    }
+  }
+
+  checkReturnCard = () => {
+    const currentCard = this.state.currentCard
+    if(!currentCard) {
+      return <div></div>
+    } else {
+      return (
+        <Card 
+          card={currentCard}
+        />)
+      }  
+    }
+
   render() {
     return (
       <section className='main-container'>
@@ -15,17 +36,15 @@ export default class App extends Component {
         <p className='subtitle'>
           a react.js study tool
         </p>
-      <Card 
-      subject={
-        data.map((trivia, index) => {
-          return trivia.subject
-        })
+      {
+        data.map(trivia => 
+          <Card 
+          subject={trivia.subject}
+          question={trivia.question}
+          answer={trivia.answer}
+          />)
       }
-      question={
-        data.map((trivia, index) => {
-        return trivia.question;
-      })}
-      />
+      {this.checkReturnCard()}
       </section>
     );
   }

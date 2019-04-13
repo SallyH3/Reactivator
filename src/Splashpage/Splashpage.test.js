@@ -1,3 +1,3 @@
 import React from 'react';
-import Search from './Card';
+import Splashpage from './Splashpage';
 import { shallow } from 'enzyme';
