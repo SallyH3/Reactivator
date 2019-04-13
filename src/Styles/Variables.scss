@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Padauk');
 @import url('https://fonts.googleapis.com/css?family=Kalam|Special+Elite');
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
 
 //Fonts
 $subtitle-font: 'Padauk', cursive;
 $title-font: 'Special Elite', cursive;
 $subject-font: 'IM Fell English SC', serif;
 $question-font: 'Raleway', sans-serif;
+$message-font: 'Padauk', cursive;
+$study-list-font: 'Raleway', sans-serif;
 
 //Colors
 $card-border: hsl(196, 46%, 19%);
 $card-bkrd: hsl(186, 74%, 93%);
 $card-color: hsl(0, 4%, 18%);
+$button-border: hsl(196, 46%, 19%);
+$message-color: hsl(244, 82%, 51%);
+
