@@ -1,12 +1,18 @@
+//background for whole page
+
 body {
   background-color: hsl(180, 14%, 95%)
 }
+
+//main container that hold header, cards, etc
 
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+//header/title of page
 
 .title {
   background-color: hsl(180, 43%, 52%);
@@ -20,12 +26,10 @@ body {
   text-align: center;
 }
 
+//subtitle text underneath header/title
+
 .subtitle {
   font-size: 2rem;
   font-family: $subtitle-font;
   margin-top: .8rem;
-}
-
-.portal-msg {
-  font-size: 50rem;
 }

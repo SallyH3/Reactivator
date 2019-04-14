@@ -1,7 +1,11 @@
+//container for button used for positioning
+
 .button-container {
   display: flex;
   justify-content: flex-end;
 }
+
+//study list button located at top right of page
 
 .study-button {
   cursor: pointer;

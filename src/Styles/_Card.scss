@@ -1,3 +1,5 @@
+//container that holds cards
+
 .card-container {
   display: flex;
   flex-direction: row;
@@ -14,15 +16,15 @@
   margin: 1rem;
 }
 
-.hide {
-  display: none;
-}
+//subject text on each card
 
 .subject {
   font-family: $subject-font;
   font-size: 1.7rem;
   margin-top: 0;
 }
+
+//question text on each card
 
 .question {
   font-family: $question-font;
@@ -33,6 +35,8 @@
   overflow-wrap: break-word;
 }
 
+//user answer input
+
 .user-answer {
   border-radius: .1rem;
   border: none;
@@ -41,6 +45,8 @@
   width: 18rem;
   padding-left: .5rem;
 }
+
+//message that displays to user if they get answer correct/incorrect
 
 .message {
   font-family: $message-font;
