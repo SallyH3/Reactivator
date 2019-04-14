@@ -6,26 +6,39 @@ class Card extends Component {
     super(props);
     this.state = {
       input: '',
-      message: ''
+      message: '',
+      incorrectCards: []
     }
   }
 
-  checkAnswer = () => {
+  checkAnswer = (e) => {
     if(this.state.input.toLowerCase() === this.props.answer.toLowerCase()) {
       this.setState({
         message: 'Correct - nice work!'
-      })
+      }, () => {
+        setTimeout( () => {
+          this.props.getCards(this.props.id)
+        }, 1000
+        )
+      } 
+      )
     } else {
       this.setState({
         message: 'Almost! Try again!'
-      })
-      
+      },
+       () => {
+        setTimeout( () => {
+          this.props.getCards(this.props.id)
+          this.props.setStorage(this.props.id);
+        }, 1000
+        )
+      }
+      ) 
     }
   }
   
   handleReturn = () => {
     this.setState({input: ''})
-    this.checkAnswer();
   }
 
   handleInput = (e) => {
@@ -36,12 +49,9 @@ class Card extends Component {
 
   handleInputChange = (e) => {
     e.preventDefault()
-    let userInput = this.state.input;
-    let result = this.checkAnswer(userInput);
+    let result = this.checkAnswer(e);
     this.handleReturn(result)
   }
-
-  //need local storage in this component to keep track of cards they answered wrong, will then send these cards they answered wrong to controls where they click 'study list' and it displays cards that were answered wrong
 
 
   render() {
@@ -56,7 +66,9 @@ class Card extends Component {
         </h4>
         <form 
           className='form'
-          onSubmit={this.handleInputChange}>
+          onSubmit=
+          {this.handleInputChange}
+          >
           <input 
             type='text'
             value={this.state.input}
