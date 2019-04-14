@@ -22,7 +22,7 @@ export default class Controls extends Component {
           value='Study list'
           type='submit'
           className='study-button'
-          {/* on click, will hide current unanswered cards and display incorrect cards, take out 'togglePopup' */}
+          // {/* on click, will hide current unanswered cards and display incorrect cards, take out 'togglePopup' */}
           onClick={this.togglePopup}
           />
       </section>
