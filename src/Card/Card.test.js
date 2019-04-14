@@ -4,6 +4,8 @@ import { shallow } from 'enzyme';
 
 let mockAnswer = 'React elements';
 
+const getCardsMock = jest.fn();
+
 let mockData = [
   {
     subject: "JSX",
@@ -27,6 +29,8 @@ describe ('Card', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Card card={mockData}
+      answer={mockAnswer}
+      getCards={getCardsMock}
       />
     )
   });
@@ -39,8 +43,19 @@ describe ('Card', () => {
     })
   });
 
-  it ('should check answer from user', () => {
+  it('should check answer from user', () => {
  wrapper.find('.user-answer').simulate('change', {target: {value: 'React elements'}});
   });
-  expect(mockAnswer).toEqual('React elements')
+  expect(mockAnswer).toEqual('React elements');
+
+  it('should setState when handleInput is invoked', () => {
+    wrapper.find('.user-answer').simulate('change', {target: {value: 'React elements'}});
+    expect(mockAnswer).toEqual('React elements');
+  });
+
+  //fix this test below
+  it('should invoke getCards when user presses return key', () => {
+    wrapper.find('.form').simulate('submit', { preventDefault: () => {}});
+    expect(getCardsMock).toBeCalled()
+  })
 });
