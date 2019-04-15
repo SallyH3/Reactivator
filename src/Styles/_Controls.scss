@@ -2,7 +2,6 @@
 
 .button-container {
   display: flex;
-  justify-content: flex-end;
 }
 
 //study list button located at top right of page
@@ -36,3 +35,10 @@
   width: 7rem;
   height: 3rem;
 }
+
+@media screen and (max-width: 1028px) {
+  .study-button {
+    margin-left: 0rem;
+  }
+}
+

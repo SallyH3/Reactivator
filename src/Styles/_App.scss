@@ -33,3 +33,20 @@ body {
   font-family: $subtitle-font;
   margin-top: .8rem;
 }
+
+@media screen and (max-width: 750px) {
+  .title {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 583px) {
+  .title {
+    font-size: 2.1rem;
+    width: 12rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+}
