@@ -6,7 +6,6 @@ exports[`Controls should match snapshot 1`] = `
 >
   <input
     className="study-button"
-    onClick={[Function]}
     type="submit"
     value="Study list"
   />
