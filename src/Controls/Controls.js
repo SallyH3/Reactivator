@@ -11,6 +11,10 @@ export default class Controls extends Component {
     //will display message to user if they click the study list button and there are no incorrect cards to display
   }
 
+  checkStudyAnswer = () => {
+    
+  }
+
   render() {
     return  (
       <section className='button-container'>

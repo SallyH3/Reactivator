@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
-import data from '../data.js';
 
-const mockState = data.map(x => {
+const mockState = this.state.quiz.map(x => {
   return {...x, answered: false
   }
 });

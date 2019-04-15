@@ -37,7 +37,6 @@
       "src/**/*.{js,jsx}",
       "!src/serviceWorker.js",
       "!src/index.js",
-      "!src/data.js",
       "!src/setupTests.js"
     ]
   }

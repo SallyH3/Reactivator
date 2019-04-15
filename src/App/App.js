@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Card from '../Card/Card.js';
 import Controls from '../Controls/Controls.js';
 import '../Styles/index.scss';
-import data from '../data.js';
 
 export default class App extends Component {
   constructor() {
@@ -17,13 +16,15 @@ export default class App extends Component {
 
   fetchData = () => {
     fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/sallyhaefling/reacttrivia')
-    .then(response => response.json())
-    .then(reactTrivia => this.setState( {quiz: this.quiz.reacttrivia.reactTrivia} ))
+      .then(response => response.json())
+    // .then(quiz => this.setState( {quiz: quiz.reactTrivia} ))
+    // .then(this.getStorage())
+      .then(quiz => this.getStorage(quiz.reactTrivia))
       .catch(err => console.log(err))
   }
 
-  getStorage = () => {
-    const newQuiz = data.map(x => {
+  getStorage = (quiz) => {
+    const newQuiz = quiz.map(x => {
       return {...x, answered: false
       }
     })
@@ -40,14 +41,14 @@ export default class App extends Component {
   }
 
   setStorage = (id) => {
-    const incorrectCard = data.find(card => {
+    const incorrectCard = this.state.quiz.find(card => {
       return card.id === id;
     })
     const checkRepeatCard = this.state.incorrectCards.find(card => {
       return card.id === id;
     })
     if(!checkRepeatCard) {
-      const updateIncorrectCards = [...this.state.incorrectCards, incorrectCard]
+      const updateIncorrectCards = [...this.state.incorrectCards, incorrectCard];
       this.setState({
         incorrectCards: updateIncorrectCards
       }, 
@@ -59,7 +60,7 @@ export default class App extends Component {
   }
 
   componentDidMount = () => {
-    this.getStorage();
+    // this.getStorage();
     this.fetchData();
   }
 
@@ -81,7 +82,11 @@ export default class App extends Component {
 
   getIncorrectCards = () => {
     this.state.incorrectCards.map(card => {
-      return (<Card incorrectCards={card}/>)
+      return (
+        <Card 
+          incorrectCards={card}
+          />
+        )
     })
     this.setState({
       showReview: true
@@ -90,7 +95,11 @@ export default class App extends Component {
 
   getAllCards = () => {
     this.state.incorrectCards.map(card => {
-      return (<Card incorrectCards={card}/>)
+      return (
+        <Card 
+          incorrectCards={card}
+          />
+        )
     })
     this.setState({
       showReview: false
@@ -112,20 +121,8 @@ export default class App extends Component {
   render() {
     let allCards = this.state.quiz.map(trivia => {
       if(!trivia.answered) {
-      return (<Card 
-      getCards = {this.getCards}
-      id={trivia.id}
-      key={trivia.id}
-      subject={trivia.subject}
-      question={trivia.question}
-      answer={trivia.answer}
-      setStorage={this.setStorage}
-      />)
-      }
-    });
-    let reviewCards = this.state.incorrectCards.map(trivia =>  {
-      if(!trivia.answered) {
-        return (<Card 
+      return (
+      <Card 
         getCards = {this.getCards}
         id={trivia.id}
         key={trivia.id}
@@ -133,19 +130,32 @@ export default class App extends Component {
         question={trivia.question}
         answer={trivia.answer}
         setStorage={this.setStorage}
+      />)
+      }
+    });
+    let reviewCards = this.state.incorrectCards.map(trivia =>  {
+      if(trivia.answered) {
+        return (
+        <Card 
+          getCards = {this.getCards}
+          id={trivia.id}
+          key={trivia.id}
+          subject={trivia.subject}
+          question={trivia.question}
+          answer={trivia.answer}
+          setStorage={this.setStorage}
         />)
         }
       });
-    let cardList;
-    this.state.showReview
-      ? cardList = reviewCards
-      : cardList = allCards;
+    let cardList = this.state.showReview ? 
+      reviewCards :
+      allCards;
     return (
       <section className='main-container'>
         <Controls 
-        getAllCards={this.getAllCards}
-        incorrectCards={this.state.incorrectCards}
-        getIncorrectCards={this.getIncorrectCards}
+          getAllCards={this.getAllCards}
+          incorrectCards={this.state.incorrectCards}
+          getIncorrectCards={this.getIncorrectCards}
         />
         <header className='title'>
           Reactivator
@@ -159,3 +169,4 @@ export default class App extends Component {
     );
   }
 }
+
