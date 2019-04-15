@@ -10,7 +10,8 @@ export default class App extends Component {
     this.state = {
       currentCard: null,
       quiz: [],
-      incorrectCards: []
+      incorrectCards: [],
+      showReview: false
     }
   }
 
@@ -70,6 +71,15 @@ export default class App extends Component {
     })
   }
 
+  getIncorrectCards = () => {
+    this.state.incorrectCards.map(card => {
+      return (<Card incorrectCards={card}/>)
+    })
+    this.setState({
+      showReview: true
+    })
+  }
+
   checkReturnCard = () => {
     const currentCard = this.state.currentCard
     if(!currentCard) {
@@ -83,10 +93,41 @@ export default class App extends Component {
     }
 
   render() {
+    let allCards = this.state.quiz.map(trivia => {
+      if(!trivia.answered) {
+      return (<Card 
+      getCards = {this.getCards}
+      id={trivia.id}
+      key={trivia.id}
+      subject={trivia.subject}
+      question={trivia.question}
+      answer={trivia.answer}
+      setStorage={this.setStorage}
+      />)
+      }
+    });
+    let reviewCards = this.state.incorrectCards.map(trivia =>  {
+      if(!trivia.answered) {
+        return (<Card 
+        getCards = {this.getCards}
+        id={trivia.id}
+        key={trivia.id}
+        subject={trivia.subject}
+        question={trivia.question}
+        answer={trivia.answer}
+        setStorage={this.setStorage}
+        />)
+        }
+      });
+    let cardList;
+    this.state.showReview
+      ? cardList = reviewCards
+      : cardList = allCards;
     return (
       <section className='main-container'>
         <Controls 
         incorrectCards={this.state.incorrectCards}
+        getIncorrectCards={this.getIncorrectCards}
         />
         <header className='title'>
           Reactivator
@@ -94,23 +135,7 @@ export default class App extends Component {
         <p className='subtitle'>
           a react.js study tool
         </p>
-      {
-        this.state.quiz.map(trivia => {
-          if(!trivia.answered) {
-          return (<Card 
-          getCards = {this.getCards}
-          id={trivia.id}
-          key={trivia.id}
-          subject={trivia.subject}
-          question={trivia.question}
-          answer={trivia.answer}
-          setStorage={this.setStorage}
-          />)
-          } else {
-            return null
-          }
-        })
-      }
+      {cardList}
       {this.checkReturnCard()}
       </section>
     );
