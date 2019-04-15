@@ -17,8 +17,6 @@ export default class App extends Component {
   fetchData = () => {
     fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/sallyhaefling/reacttrivia')
       .then(response => response.json())
-    // .then(quiz => this.setState( {quiz: quiz.reactTrivia} ))
-    // .then(this.getStorage())
       .then(quiz => this.getStorage(quiz.reactTrivia))
       .catch(err => console.log(err))
   }
@@ -60,7 +58,6 @@ export default class App extends Component {
   }
 
   componentDidMount = () => {
-    // this.getStorage();
     this.fetchData();
   }
 
