@@ -11,7 +11,22 @@
   cursor: pointer;
   margin-left: 60rem;
   border-radius: .2rem;
-  background-color: hsl(158, 27%, 83%);
+  background-color: hsl(159, 32%, 79%);
+  border: .1rem solid $button-border;
+  font-size: 1.1rem;
+  font-family: $study-list-font;
+  font-weight: 800;
+  margin-top: .8rem;
+  padding: .5rem;
+  width: 7rem;
+  height: 3rem;
+}
+
+.show-all-button {
+  cursor: pointer;
+  margin-left: 1rem;
+  border-radius: .2rem;
+  background-color: hsl(158, 66%, 72%);
   border: .1rem solid $button-border;
   font-size: 1.1rem;
   font-family: $study-list-font;

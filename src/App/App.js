@@ -80,6 +80,15 @@ export default class App extends Component {
     })
   }
 
+  getAllCards = () => {
+    this.state.incorrectCards.map(card => {
+      return (<Card incorrectCards={card}/>)
+    })
+    this.setState({
+      showReview: false
+    })
+  }
+
   checkReturnCard = () => {
     const currentCard = this.state.currentCard
     if(!currentCard) {
@@ -126,6 +135,7 @@ export default class App extends Component {
     return (
       <section className='main-container'>
         <Controls 
+        getAllCards={this.getAllCards}
         incorrectCards={this.state.incorrectCards}
         getIncorrectCards={this.getIncorrectCards}
         />

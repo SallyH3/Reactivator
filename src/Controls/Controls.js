@@ -20,6 +20,12 @@ export default class Controls extends Component {
           className='study-button'
           onClick={this.props.getIncorrectCards}
           />
+          <input 
+          value='Show all'
+          type='submit'
+          className='show-all-button'
+          onClick={this.props.getAllCards}
+          />
       </section>
     )
   }
