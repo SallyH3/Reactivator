@@ -12,18 +12,22 @@ export default class Controls extends Component {
   }
 
   displayIncorrectCards = () => {
-    // to display incorrectly answered cards - will happen on click of the button, local storage is keeping track of incorrect cards inside of App.js component
+    this.props.incorrectCards.map((card) => {
+      console.log('incorrect card in onClick method', card)
+      return card;
+      // on click, will hide current unanswered/correctly answered cards and display incorrect cards 
+    })
   }
 
   render() {
+    console.log('incorrectCards array: ', this.props.incorrectCards)
     return  (
       <section className='button-container'>
           <input 
           value='Study list'
           type='submit'
           className='study-button'
-          // {/* on click, will hide current unanswered cards and display incorrect cards, take out 'togglePopup' */}
-          onClick={this.togglePopup}
+          onClick={this.displayIncorrectCards}
           />
       </section>
     )

@@ -85,7 +85,9 @@ export default class App extends Component {
   render() {
     return (
       <section className='main-container'>
-        <Controls />
+        <Controls 
+        incorrectCards={this.state.incorrectCards}
+        />
         <header className='title'>
           Reactivator
         </header>
