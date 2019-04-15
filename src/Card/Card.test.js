@@ -2,9 +2,11 @@ import React from 'react';
 import Card from './Card';
 import { shallow } from 'enzyme';
 
+jest.useFakeTimers();
+
 let mockAnswer = 'React elements';
 
-const getCardsMock = jest.fn();
+const checkAnswerMock = jest.fn();
 
 let mockData = [
   {
@@ -30,7 +32,7 @@ describe ('Card', () => {
     wrapper = shallow(
       <Card card={mockData}
       answer={mockAnswer}
-      getCards={getCardsMock}
+      getCards={checkAnswerMock}
       />
     )
   });
@@ -38,10 +40,13 @@ describe ('Card', () => {
   it('should have default states', () => {
     expect(wrapper.state()).toEqual({
       input: '',
-      message: '',
-      incorrectCards: []
+      message: ''
     })
   });
+
+  it ('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
 
   it('should check answer from user', () => {
  wrapper.find('.user-answer').simulate('change', {target: {value: 'React elements'}});
@@ -53,9 +58,8 @@ describe ('Card', () => {
     expect(mockAnswer).toEqual('React elements');
   });
 
-  //fix this test below
-  it('should invoke getCards when user presses return key', () => {
+  it('should check if setTimeout has been called', () => {
     wrapper.find('.form').simulate('submit', { preventDefault: () => {}});
-    expect(getCardsMock).toBeCalled()
+   expect(setTimeout).toHaveBeenCalledTimes(1);
   })
 });

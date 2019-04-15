@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<section
+  className="main-container"
+>
+  <Controls
+    incorrectCards={Array []}
+  />
+  <header
+    className="title"
+  >
+    Reactivator
+  </header>
+  <p
+    className="subtitle"
+  >
+    a react.js study tool
+  </p>
+  <Card
+    answer="React elements"
+    getCards={[Function]}
+    id={1}
+    key="1"
+    question="JSX represents objects called what?"
+    setStorage={[Function]}
+    subject="JSX"
+  />
+  <Card
+    answer="HTML and JavaScript"
+    getCards={[Function]}
+    id={2}
+    key="2"
+    question="JSX is a combination of these two languages"
+    setStorage={[Function]}
+    subject="JSX"
+  />
+  <Card
+    answer="Return"
+    getCards={[Function]}
+    id={3}
+    key="3"
+    question="Where is JSX located inside of a component? Hint: it starts with an R"
+    setStorage={[Function]}
+    subject="JSX"
+  />
+  <Card
+    answer="Root DOM node"
+    getCards={[Function]}
+    id={4}
+    key="4"
+    question="When rendering an element into the DOM, what is it called when we use something like <div>?"
+    setStorage={[Function]}
+    subject="Rendering elements"
+  />
+  <Card
+    answer="Immutable"
+    getCards={[Function]}
+    id={5}
+    key="5"
+    question="Are React elements mutable or immutable?"
+    setStorage={[Function]}
+    subject="Rendering elements"
+  />
+  <Card
+    answer="Props"
+    getCards={[Function]}
+    id={6}
+    key="6"
+    question="Most components can be customized when they are created, with different parameters. What are these creation parameters called?"
+    setStorage={[Function]}
+    subject="Components and props"
+  />
+  <Card
+    answer="Props"
+    getCards={[Function]}
+    id={7}
+    key="7"
+    question="Whether you declare a component as a function or a class, it must never modify its own what?"
+    setStorage={[Function]}
+    subject="Components and props"
+  />
+  <Card
+    answer="State"
+    getCards={[Function]}
+    id={8}
+    key="8"
+    question="We use this when we want to change something inside of a component"
+    setStorage={[Function]}
+    subject="State and lifecycle"
+  />
+  <Card
+    answer="componentDidMount"
+    getCards={[Function]}
+    id={9}
+    key="9"
+    question="This method runs after the component output has been rendered to the DOM"
+    setStorage={[Function]}
+    subject="State and lifecycle"
+  />
+  <Card
+    answer="Constructor"
+    getCards={[Function]}
+    id={10}
+    key="10"
+    question="Where do you assign this.state?"
+    setStorage={[Function]}
+    subject="State and lifecycle"
+  />
+  <Card
+    answer="this.setState"
+    getCards={[Function]}
+    id={11}
+    key="11"
+    question="We use this method to modify state because we cannot modify state directly"
+    setStorage={[Function]}
+    subject="State and lifecycle"
+  />
+  <Card
+    answer="Data down"
+    getCards={[Function]}
+    id={12}
+    key="12"
+    question="A component may choose to pass its state down as props to its child components, what is this passing down referred to?"
+    setStorage={[Function]}
+    subject="State and lifecycle"
+  />
+  <Card
+    answer="camelCase"
+    getCards={[Function]}
+    id={13}
+    key="13"
+    question="React events are named using what rather than lowercase?"
+    setStorage={[Function]}
+    subject="Handling events"
+  />
+  <Card
+    answer="Undefined"
+    getCards={[Function]}
+    id={14}
+    key="14"
+    question="In JavaScript, class methods are not bound by default. If you forget to bind this.handleClick and pass it to onClick, the value of this will be what when the function is actually called?"
+    setStorage={[Function]}
+    subject="Handling events"
+  />
+  <Card
+    answer="Variables"
+    getCards={[Function]}
+    id={15}
+    key="15"
+    question="You can use what to store elements? This can help you conditionally render a part of the component while the rest of the output doesnt change"
+    setStorage={[Function]}
+    subject="Conditional rendering"
+  />
+  <Card
+    answer="Keys"
+    getCards={[Function]}
+    id={16}
+    key="16"
+    question="These help React identify which items have changed, are added, or are removed. These should be given to the elements inside the array to give the elements a stable identity"
+    setStorage={[Function]}
+    subject="Lists and keys"
+  />
+  <Card
+    answer="IDs"
+    getCards={[Function]}
+    id={17}
+    key="17"
+    question="The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use what from your data as keys?"
+    setStorage={[Function]}
+    subject="Lists and keys"
+  />
+  <Card
+    answer="Index"
+    getCards={[Function]}
+    id={18}
+    key="18"
+    question="When you dont have stable IDs for rendered items, you may use the items what as a key as a last resort?"
+    setStorage={[Function]}
+    subject="Lists and keys"
+  />
+  <Card
+    answer="Describe"
+    getCards={[Function]}
+    id={19}
+    key="19"
+    question="What allows us to write some text that explains the nature of the group of tests conducted within it? This is part of the setup phase on our tests"
+    setStorage={[Function]}
+    subject="Testing with Jest and Enzyme"
+  />
+  <Card
+    answer="It"
+    getCards={[Function]}
+    id={20}
+    key="20"
+    question="What allows us to write some text describing what a test should successfully achieve"
+    setStorage={[Function]}
+    subject="Testing with Jest and Enzyme"
+  />
+  <Card
+    answer="Expect"
+    getCards={[Function]}
+    id={21}
+    key="21"
+    question="Here we carry out the test itself through assertion. What method carries a result of a function?"
+    setStorage={[Function]}
+    subject="Testing with Jest and Enzyme"
+  />
+  <Card
+    answer="Assertion"
+    getCards={[Function]}
+    id={22}
+    key="22"
+    question="This takes a boolean valued function and always expects that return value to be true, hence the name expect. In the event that false is returned, the test fails and execution stops within the corresponding it() or test() block"
+    setStorage={[Function]}
+    subject="Testing with Jest and Enzyme"
+  />
+  <Card
+    answer="setupTest.js"
+    getCards={[Function]}
+    id={23}
+    key="23"
+    question="Make sure this file is included before using Enzyme"
+    setStorage={[Function]}
+    subject="Testing with Jest and Enzyme"
+  />
+  <Card
+    answer="Events"
+    getCards={[Function]}
+    id={24}
+    key="24"
+    question="The simulate function simulates what for us?"
+    setStorage={[Function]}
+    subject="Testing with Jest and Enzyme"
+  />
+  <Card
+    answer="Snapshot"
+    getCards={[Function]}
+    id={25}
+    key="25"
+    question="This kind of testing helps you check that the rendered output of a component is correct at all times"
+    setStorage={[Function]}
+    subject="Testing with Jest and Enzyme"
+  />
+  <Card
+    answer="Shallow"
+    getCards={[Function]}
+    id={26}
+    key="26"
+    question="These render tests are useful to keep yourself constrained to testing the component as a unit and avoiding indirectly testing the behavior of child components"
+    setStorage={[Function]}
+    subject="Testing with Jest and Enzyme"
+  />
+  <Card
+    answer="Components"
+    getCards={[Function]}
+    id={27}
+    key="27"
+    question="In OOP we break our code out into modular classes. In React, we call these what?"
+    setStorage={[Function]}
+    subject="Fundamentals"
+  />
+  <Card
+    answer="className"
+    getCards={[Function]}
+    id={28}
+    key="28"
+    question="In JSX, what do we call a class? Hint: it is camelCase"
+    setStorage={[Function]}
+    subject="Fundamentals"
+  />
+  <Card
+    answer="Component"
+    getCards={[Function]}
+    id={29}
+    key="29"
+    question="What do our class components extend?"
+    setStorage={[Function]}
+    subject="Fundamentals"
+  />
+  <Card
+    answer="Functional"
+    getCards={[Function]}
+    id={30}
+    key="30"
+    question="If a component has nothing but the render method, then it is a great candidate for refactoring into what kind of component?"
+    setStorage={[Function]}
+    subject="Fundamentals"
+  />
+  <Card
+    answer="Single"
+    getCards={[Function]}
+    id={31}
+    key="31"
+    question="Components in React should follow what responsibility principle which helps keep our code modular and dry?"
+    setStorage={[Function]}
+    subject="Fundamentals"
+  />
+  <Card
+    answer="Virtual"
+    getCards={[Function]}
+    id={32}
+    key="32"
+    question="React creates an in memory data structure cache, computes the resulting differences, and then updates the browsers displayed DOM efficiently. This is referrred to as what kind of DOM?"
+    setStorage={[Function]}
+    subject="Fundamentals"
+  />
+  <div />
+</section>
+`;
