@@ -31,7 +31,8 @@ it('renders without crashing', () => {
     expect(wrapper.state()).toEqual({
       currentCard: null,
       quiz: mockState,
-      incorrectCards: []
+      incorrectCards: [],
+      showReview: false
     })
   })
 });
