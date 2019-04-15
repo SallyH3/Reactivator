@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls should match snapshot 1`] = `
+<section
+  className="button-container"
+>
+  <input
+    className="study-button"
+    onClick={[Function]}
+    type="submit"
+    value="Study list"
+  />
+</section>
+`;

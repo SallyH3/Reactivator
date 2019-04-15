@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot 1`] = `
+<main
+  className="card-container"
+>
+  <section
+    className="cards"
+  >
+    <h3
+      className="subject"
+    >
+      Subject: 
+    </h3>
+    <h4
+      className="question"
+    >
+      Question: 
+    </h4>
+    <form
+      className="form"
+      onSubmit={[Function]}
+    >
+      <input
+        className="user-answer"
+        onChange={[Function]}
+        placeholder="Enter answer and press return"
+        type="text"
+        value=""
+      />
+      <p
+        className="message"
+      />
+    </form>
+  </section>
+</main>
+`;

@@ -23,6 +23,10 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
   });
 
+  it ('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
   it('should have default states', () => {
     expect(wrapper.state()).toEqual({
       currentCard: null,
