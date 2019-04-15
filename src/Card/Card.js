@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import data from '../data.js';
+import Controls from '../Controls/Controls.js';
 
 class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
       input: '',
-      message: '',
-      incorrectCards: []
+      message: ''
     }
   }
 
@@ -24,7 +24,7 @@ class Card extends Component {
       )
     } else {
       this.setState({
-        message: 'Almost! Try again!'
+        message: 'Not quite!'
       },
        () => {
         setTimeout( () => {
