@@ -15,6 +15,13 @@ export default class App extends Component {
     }
   }
 
+  fetchData = () => {
+    fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/sallyhaefling/reacttrivia')
+    .then(response => response.json())
+    .then(reactTrivia => this.setState( {quiz: this.quiz.reacttrivia.reactTrivia} ))
+      .catch(err => console.log(err))
+  }
+
   getStorage = () => {
     const newQuiz = data.map(x => {
       return {...x, answered: false
@@ -53,6 +60,7 @@ export default class App extends Component {
 
   componentDidMount = () => {
     this.getStorage();
+    this.fetchData();
   }
 
   getCards = (id) => {
