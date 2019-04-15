@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import data from '../data.js';
 import Controls from '../Controls/Controls.js';
+import App from '../App/App.js';
 
 class Card extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Card extends Component {
           this.props.getCards(this.props.id)
         }, 1000
         )
-      } 
+        } 
       )
     } else {
       this.setState({
