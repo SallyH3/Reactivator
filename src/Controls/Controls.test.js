@@ -24,4 +24,9 @@ describe('Controls', () => {
     let btn = (wrapper).find('.study-button').simulate('click')
     expect(btn.exists()).toEqual(true);
   });
+
+  it('renders the show all button', () => {
+    let btn = (wrapper).find('.show-all-button').simulate('click')
+    expect(btn.exists()).toEqual(true);
+  });
 });

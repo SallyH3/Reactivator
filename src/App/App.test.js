@@ -2,11 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
-
-const mockState = this.state.quiz.map(x => {
-  return {...x, answered: false
-  }
-});
  
 describe ('App', () => {
   let wrapper;
@@ -29,7 +24,7 @@ it('renders without crashing', () => {
   it('should have default states', () => {
     expect(wrapper.state()).toEqual({
       currentCard: null,
-      quiz: mockState,
+      quiz: [],
       incorrectCards: [],
       showReview: false
     })
