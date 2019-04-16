@@ -21,45 +21,45 @@ export default class App extends Component {
       .catch(err => console.log(err))
   }
 
-  getStorage = (quiz) => {
-    const newQuiz = quiz.map(x => {
-      return {...x, answered: false
-      }
-    })
-    const incorrectAnswers = localStorage.getItem('incorrectAnswers')
-    if(incorrectAnswers !== null) {
-      this.setState({
-        quiz: newQuiz,
-        incorrectCards: JSON.parse(incorrectAnswers)
-      })
-    }
-    this.setState({
-      quiz: newQuiz
-    })
-  }
+  // getStorage = (quiz) => {
+  //   const newQuiz = quiz.map(x => {
+  //     return {...x, answered: false
+  //     }
+  //   })
+  //   const incorrectAnswers = localStorage.getItem('incorrectAnswers')
+  //   if(incorrectAnswers !== null) {
+  //     this.setState({
+  //       quiz: newQuiz,
+  //       incorrectCards: JSON.parse(incorrectAnswers)
+  //     })
+  //   }
+  //   this.setState({
+  //     quiz: newQuiz
+  //   })
+  // }
 
-  setStorage = (id) => {
-    const incorrectCard = this.state.quiz.find(card => {
-      return card.id === id;
-    })
-    const checkRepeatCard = this.state.incorrectCards.find(card => {
-      return card.id === id;
-    })
-    if(!checkRepeatCard) {
-      const updateIncorrectCards = [...this.state.incorrectCards, incorrectCard];
-      this.setState({
-        incorrectCards: updateIncorrectCards
-      }, 
-      () => {
-        localStorage.setItem('incorrectAnswers', JSON.stringify(updateIncorrectCards))
-      }
-      )
-    }
-  }
+  // setStorage = (id) => {
+  //   const incorrectCard = this.state.quiz.find(card => {
+  //     return card.id === id;
+  //   })
+  //   const checkRepeatCard = this.state.incorrectCards.find(card => {
+  //     return card.id === id;
+  //   })
+  //   if(!checkRepeatCard) {
+  //     const updateIncorrectCards = [...this.state.incorrectCards, incorrectCard];
+  //     this.setState({
+  //       incorrectCards: updateIncorrectCards
+  //     }, 
+  //     () => {
+  //       localStorage.setItem('incorrectAnswers', JSON.stringify(updateIncorrectCards))
+  //     }
+  //     )
+  //   }
+  // }
 
-  componentDidMount = () => {
-    this.fetchData();
-  }
+  // componentDidMount = () => {
+  //   this.fetchData();
+  // }
 
   getCards = (id) => {
     const card = this.state.quiz.map(x => {

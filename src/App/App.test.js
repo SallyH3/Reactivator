@@ -67,7 +67,8 @@ id: 1},
   it('should setState in getIncorrectCards method', () => {
     wrapper.setState({showReview: true});
     wrapper.instance().getIncorrectCards();
-    expect(wrapper.state('showReview')).toEqual(true)
+    expect(wrapper.state('showReview')).toEqual(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should setState in getAllCards method', () => {

@@ -45,3 +45,26 @@ exports[`App should match snapshot 1`] = `
   <div />
 </section>
 `;
+
+exports[`App should setState in getIncorrectCards method 1`] = `
+<section
+  className="main-container"
+>
+  <Controls
+    getAllCards={[Function]}
+    getIncorrectCards={[Function]}
+    incorrectCards={Array []}
+  />
+  <header
+    className="title"
+  >
+    Reactivator
+  </header>
+  <p
+    className="subtitle"
+  >
+    a react.js study tool
+  </p>
+  <div />
+</section>
+`;
