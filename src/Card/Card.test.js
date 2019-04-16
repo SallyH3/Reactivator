@@ -60,7 +60,7 @@ describe ('Card', () => {
 
   it ('should setState with a message to user if they answered correct or incorrectly', () => {
     expect(wrapper.state('message')).toEqual('')
-    wrapper.instance().checkAnswerMock();
+    wrapper.instance().checkAnswer();
     wrapper.find('.form').simulate('keypress', {key: 'Enter'})
     expect(wrapper.state('message')).toEqual('Not quite!');
   });

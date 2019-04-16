@@ -13,7 +13,6 @@ class Card extends Component {
 
   checkAnswer = (e) => {
     if(this.state.input.toLowerCase() === this.props.answer.toLowerCase()) {
-      console.log(this.props.id)
       localStorage.removeItem('incorrectAnswers');
       this.setState({
         message: 'Correct - nice work!'
