@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Controls from '../Controls/Controls.js';
-import App from '../App/App.js';
 
 class Card extends Component {
   constructor(props) {
@@ -54,21 +52,20 @@ class Card extends Component {
     this.handleReturn(result)
   }
 
-
   render() {
     return (
       <main className='card-container'>
-      <section className='cards'>
-        <h3 className='subject'>
-          Subject: {this.props.subject}
-        </h3>
-        <h4 className='question'>
-          Question: {this.props.question}
-        </h4>
-        <form 
-          className='form'
-          onSubmit=
-          {this.handleInputChange}
+        <section className='cards'>
+          <h3 className='subject'>
+            Subject: {this.props.subject}
+          </h3>
+          <h4 className='question'>
+            Question: {this.props.question}
+          </h4>
+          <form 
+            className='form'
+            onSubmit=
+            {this.handleInputChange}
           >
           <input 
             type='text'
@@ -78,7 +75,7 @@ class Card extends Component {
             className='user-answer'>
           </input>
           <p className = 'message'>{this.state.message}</p>
-        </form>
+          </form>
         </section>
       </main>
     )

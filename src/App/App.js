@@ -116,16 +116,16 @@ export default class App extends Component {
   render() {
     let allCards = this.state.quiz.map(trivia => {
       if(!trivia.answered) {
-      return (
-      <Card 
-        getCards = {this.getCards}
-        id={trivia.id}
-        key={trivia.id}
-        subject={trivia.subject}
-        question={trivia.question}
-        answer={trivia.answer}
-        setStorage={this.setStorage}
-      />)
+        return (
+        <Card 
+          getCards = {this.getCards}
+          id={trivia.id}
+          key={trivia.id}
+          subject={trivia.subject}
+          question={trivia.question}
+          answer={trivia.answer}
+          setStorage={this.setStorage}
+        />)
       }
     });
     let reviewCards = this.state.incorrectCards.map(trivia =>  {

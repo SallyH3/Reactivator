@@ -23,8 +23,7 @@ let mockData = [
     correct: false,
     id: 2
   }
-]
-
+];
 
 describe ('Card', () => {
   let wrapper;
@@ -41,32 +40,31 @@ describe ('Card', () => {
     expect(wrapper.state()).toEqual({
       input: '',
       message: ''
-    })
+    });
   });
 
-  it ('should match snapshot', () => {
+  it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should check answer from user', () => {
- wrapper.find('.user-answer').simulate('change', {target: {value: 'React elements'}});
- expect(mockAnswer).toEqual('react elements');
-});
+    wrapper.find('.user-answer').simulate('change', {target: {value: 'React elements'}});
+    expect(mockAnswer).toEqual('react elements');
+  });
 
   it('should check if setTimeout has been called', () => {
     wrapper.find('.form').simulate('submit', { preventDefault: () => {}});
-   expect(setTimeout).toHaveBeenCalledTimes(1);
+    expect(setTimeout).toHaveBeenCalledTimes(1);
   });
 
-  it ('should setState with a message to user if they answered incorrectly', () => {
+  it('should setState with a message to user if they answered incorrectly', () => {
     expect(wrapper.state('message')).toEqual('')
     wrapper.instance().checkAnswer();
     wrapper.find('.form').simulate('keypress', {key: 'Enter'})
     expect(wrapper.state('message')).toEqual('Not quite!');
   });
 
-  it ('should setState to empty string after user presses return', () => {
-    wrapper.find('.user-answer').simulate('change', {target: {value: ''}});
+  it('should setState to empty string after user presses return', () => {
     wrapper.instance().handleReturn();
     expect(wrapper.state().input).toEqual('');
   });
