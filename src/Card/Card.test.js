@@ -6,8 +6,6 @@ jest.useFakeTimers();
 
 let mockAnswer = 'react elements';
 
-const checkAnswerMock = jest.fn();
-
 const mockMsg = 'Correct - nice work!';
 
 let mockData = [
@@ -34,7 +32,6 @@ describe ('Card', () => {
     wrapper = shallow(
       <Card card={mockData}
       answer={mockAnswer}
-      checkAnswer={checkAnswerMock}
       message={mockMsg}
       />
     )
@@ -70,6 +67,7 @@ describe ('Card', () => {
 
   it ('should setState to empty string after user presses return', () => {
     wrapper.find('.user-answer').simulate('change', {target: {value: ''}});
+    wrapper.instance().handleReturn();
     expect(wrapper.state().input).toEqual('');
   });
 });
