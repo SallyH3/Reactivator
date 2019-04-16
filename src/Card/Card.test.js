@@ -4,9 +4,9 @@ import { shallow } from 'enzyme';
 
 jest.useFakeTimers();
 
-let mockAnswer = 'React elements';
+let mockAnswer = 'react elements';
 
-const checkAnswerMock = jest.fn();
+const mockMsg = 'Correct - nice work!';
 
 let mockData = [
   {
@@ -32,7 +32,7 @@ describe ('Card', () => {
     wrapper = shallow(
       <Card card={mockData}
       answer={mockAnswer}
-      checkAnswer={checkAnswerMock}
+      message={mockMsg}
       />
     )
   });
@@ -50,7 +50,7 @@ describe ('Card', () => {
 
   it('should check answer from user', () => {
  wrapper.find('.user-answer').simulate('change', {target: {value: 'React elements'}});
- expect(mockAnswer).toEqual('React elements');
+ expect(mockAnswer).toEqual('react elements');
 });
 
   it('should check if setTimeout has been called', () => {
@@ -58,10 +58,16 @@ describe ('Card', () => {
    expect(setTimeout).toHaveBeenCalledTimes(1);
   });
 
-  it ('should setState with a message to user if they answered correct or incorrectly', () => {
+  it ('should setState with a message to user if they answered incorrectly', () => {
     expect(wrapper.state('message')).toEqual('')
     wrapper.instance().checkAnswer();
     wrapper.find('.form').simulate('keypress', {key: 'Enter'})
     expect(wrapper.state('message')).toEqual('Not quite!');
+  });
+
+  it ('should setState to empty string after user presses return', () => {
+    wrapper.find('.user-answer').simulate('change', {target: {value: ''}});
+    wrapper.instance().handleReturn();
+    expect(wrapper.state().input).toEqual('');
   });
 });
