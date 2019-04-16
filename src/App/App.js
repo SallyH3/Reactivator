@@ -62,12 +62,10 @@ export default class App extends Component {
   }
 
   getCards = (id) => {
-    console.log('card before', this.card)
     const card = this.state.quiz.map(x => {
       if(id === x.id) {
         //makes new object that includes answered: true now
         //making the answered true after finding id
-        console.log('x:', {...x})
         return {...x, answered: true
         }
       } else {

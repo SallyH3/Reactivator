@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App should invoke checkReturnCard and return card 1`] = `
+<section
+  className="main-container"
+>
+  <Controls
+    getAllCards={[Function]}
+    getIncorrectCards={[Function]}
+    incorrectCards={Array []}
+  />
+  <header
+    className="title"
+  >
+    Reactivator
+  </header>
+  <p
+    className="subtitle"
+  >
+    a react.js study tool
+  </p>
+  <div />
+</section>
+`;
+
 exports[`App should match snapshot 1`] = `
 <section
   className="main-container"
