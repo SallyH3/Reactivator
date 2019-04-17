@@ -14,9 +14,38 @@ $message-font: 'Padauk', cursive;
 $study-list-font: 'Raleway', sans-serif;
 
 //colors
+$body-bkrd: hsl(180, 14%, 95%);
+$title-bkrd: hsl(180, 43%, 52%);
+$hover-bkrd: hsl(150, 76%, 56%);
+$box-shadow: hsl(0, 0%, 8%);
 $card-border: hsl(196, 46%, 19%);
 $card-bkrd: hsl(186, 74%, 93%);
 $card-color: hsl(0, 4%, 18%);
 $button-border: hsl(196, 46%, 19%);
 $message-color: hsl(244, 82%, 51%);
+$study-btn-bkrd: hsl(159, 27%, 80%);
+$show-btn-bkrd: hsl(158, 50%, 57%);
+
+//button rules
+
+@mixin button-rules {
+  cursor: pointer;
+  margin-left: 60rem;
+  border-radius: .2rem;
+  border: .1rem solid $button-border;
+  font-size: 1.1rem;
+  font-family: $study-list-font;
+  font-weight: 800;
+  margin-top: .8rem;
+  padding: .5rem;
+  width: 7rem;
+  height: 3rem;
+  &:hover {
+    background-color: $hover-bkrd;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: .2rem .2rem .2rem $box-shadow;
+  }
+}
+
 
