@@ -22,8 +22,8 @@ export default class App extends Component {
   }
 
   getStorage = (quiz) => {
-    const newQuiz = quiz.map(x => {
-      return {...x, answered: false
+    const newQuiz = quiz.map(question => {
+      return {...question, answered: false
       }
     })
     const incorrectAnswers = localStorage.getItem('incorrectAnswers')
