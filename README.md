@@ -25,7 +25,13 @@ npm test
 
 ## Wireframes and photos of project:
 
+### Desktop view:
 
+<img width="1270" alt="Screen Shot 2019-04-16 at 7 19 18 PM" src="https://user-images.githubusercontent.com/40863560/56254245-3b163380-607d-11e9-8fa4-58cc0dfdeeea.png">
+
+### Mobile view (320px): 
+
+<img width="399" alt="Screen Shot 2019-04-16 at 7 27 13 PM" src="https://user-images.githubusercontent.com/40863560/56254356-ae1faa00-607d-11e9-9c45-f44ff17f77da.png">
 
 ## Technologies used:
 
