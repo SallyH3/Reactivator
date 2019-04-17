@@ -1,7 +1,7 @@
 //background for whole page
 
 body {
-  background-color: hsl(180, 14%, 95%)
+  background-color: $body-bkrd;
 }
 
 //main container that holds header, cards, etc
@@ -15,9 +15,9 @@ body {
 //header/title of page
 
 .title {
-  background-color: hsl(180, 43%, 52%);
+  background-color: $title-bkrd;
   border-radius: .3rem;
-  box-shadow: .4rem .4rem .4rem hsl(0, 0%, 8%);
+  box-shadow: .4rem .4rem .4rem $box-shadow;
   font-family: $title-font;
   font-size: 5rem;
   margin-top: 2.5rem;
