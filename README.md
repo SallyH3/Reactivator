@@ -2,7 +2,7 @@
 
 ## Abstract:
 
-I created an app for users to utilize as a study tool for React.js. It solves the problem of users needing some extra practice with the fundamentals of React including testing questions.  
+As a solo project, I created an app for users to utilize as a study tool for React.js. It solves the problem of users needing some extra practice with the fundamentals of React including testing questions.  
 
 
 ## Setup:
