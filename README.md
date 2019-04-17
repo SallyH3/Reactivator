@@ -23,7 +23,11 @@ To run tests in the game program, Run:
 npm test
 ```
 
-## Wireframes and photos of project:
+## Photos of project
+
+### Wireframe:
+
+![20190416_193059](https://user-images.githubusercontent.com/40863560/56254592-a280b300-607e-11e9-89ba-97c896d0502c.jpg)
 
 ### Desktop view:
 
