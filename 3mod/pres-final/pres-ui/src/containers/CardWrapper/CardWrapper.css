@@ -1,0 +1,11 @@
+.card-container {
+  background-color: blue;
+  color: white;
+  margin: 20px;
+}
+
+.individual-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
