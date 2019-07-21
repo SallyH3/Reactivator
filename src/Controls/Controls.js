@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Controls extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
-
-  render() {
+export const Controls = (props) => {
     return  (
       <section className='button-container'>
           <input 
           value='Study list'
           type='submit'
           className='study-button'
-          onClick={this.props.getIncorrectCards}
+          onClick={props.getIncorrectCards}
           />
           <input 
           value='Show all'
           type='submit'
           className='show-all-button'
-          onClick={this.props.getAllCards}
+          onClick={props.getAllCards}
           />
       </section>
     )
-  }
 }
+
+export default Controls;
